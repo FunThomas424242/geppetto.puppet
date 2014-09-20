@@ -1,0 +1,18 @@
+{
+  "author": "FunThomas424242 (Thomas Schubert)",
+  "dependencies": [{
+      "name": "gini/archive",
+      "version_requirement": ">= 0.2.0"
+    }],
+  "license": "GNU LGPL v3",
+  "name": "huluvu424242-geppetto",
+  "operatingsystem_support": [{"operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04"]}],
+  "project_page": "https://github.com/FunThomas424242/geppetto.puppet",
+  "requirements": [],
+  "source": "https://github.com/FunThomas424242/geppetto.puppet",
+  "summary": "Install the ide geppetto to local drive.",
+  "tags": ["ubuntu", "geppetto", "ide", "puppet" ],
+  "version": "0.1.0"
+}
