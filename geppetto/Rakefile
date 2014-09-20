@@ -1,2 +1,7 @@
-require 'rubygems'
-require 'puppetlabs_spec_helper/rake_tasks'
+require 'rake'
+2 
+3 require 'rspec/core/rake_task'
+4 
+5 RSpec::Core::RakeTask.new(:spec) do |t|
+6   t.pattern = 'spec/*/*_spec.rb'
+7 end

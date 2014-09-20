@@ -1,3 +1,0 @@
-# geppetto #
-
-This is the geppetto module. It provides...
