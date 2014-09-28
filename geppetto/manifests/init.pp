@@ -63,10 +63,11 @@ class geppetto (
   archive { $_libName:
     ensure     => present,
     url        => $_srcURL,
+    extension => "zip",
     src_target => $tmpDir,
     target     => $_targetDir,
     checksum   => $checksum,
-    require    => [File[$tmpDir],File[$_targetDir]],
+    require    => [File[$tmpDir], File[$_targetDir]],
   }
 
   file { 'geppetto.desktop':
