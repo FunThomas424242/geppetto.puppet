@@ -72,7 +72,7 @@ class geppetto (
   file { 'geppetto.desktop':
     ensure  => file,
     path    => "$_homeDir/Schreibtisch/geppetto.desktop",
-    content => template('gepetto/gepetto.desktop.erb'),
+    content => template('geppetto/geppetto.desktop.erb'),
     require => Archive[$_libName],
   }
 }
