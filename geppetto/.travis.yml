@@ -1,11 +1,12 @@
 ---
-sudo: false
 language: ruby
+sudo: false
 cache: bundler 
 bundler_args: --without development
 script: bundle exec rake spec SPEC_OPTS='--format documentation'
+language: ruby
 rvm:
-  - 2.1.0
+  - 2.0.0-p247
 env:
   matrix:
     - PUPPET_GEM_VERSION="~> 2.7.0"
