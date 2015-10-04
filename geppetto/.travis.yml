@@ -1,9 +1,9 @@
 sudo: false
 
-language: ruby
+#language: ruby
 
 rvm:
-  - ruby 2.2.3
+  - ruby-2.2.3
   
 cache: bundler 
 bundler_args: --without development
