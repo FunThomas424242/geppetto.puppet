@@ -1,8 +1,5 @@
 language: ruby
-env:
-  matrix:
-    - PUPPET_GEM_VERSION="~> 3.2.0"
-
+rvm reinstall ruby-head --binary
 sudo: false
 cache: bundler 
 bundler_args: --without development
