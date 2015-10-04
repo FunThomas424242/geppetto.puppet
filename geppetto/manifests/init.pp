@@ -6,10 +6,13 @@
 #
 # Actions:
 #
-# Requires: see Modulefile
+# Requires: see metadata.json
 #
 # Sample Usage:
 #
+include archive::prerequisites
+
+
 class geppetto (
   $user            = 'huluvu424242',
   $geppettoVersion = '4.2.0-R201407250959',
@@ -19,40 +22,14 @@ class geppetto (
   $libName         = undef,
   $targetDir       = undef,
   $checksum        = false,) {
-  # init srcURL
-  if $srcURL == undef {
-    $_srcURL = "https://downloads.puppetlabs.com/geppetto/4.x/geppetto-linux.gtk.x86_64-$geppettoVersion.zip"
-  } else {
-    $_srcURL = $srcURL
-  }
+ 
 
-  # init homeDir
-  if $homeDir == undef {
-    $_homeDir = "/home/$user"
-  } else {
-    $_homeDir = $homeDir
-  }
+  notice("srcURL: $geppetto::params::srcURL")
+  notice("homeDir: $geppetto::params::homeDir")
+  notice("libName: $geppetto::params::libName")
+  notice("targetDir: $geppetto::params::targetDir")
 
-  # init libName
-  if $libName == undef {
-    $_libName = "geppetto-$geppettoVersion"
-  } else {
-    $_libName = $libName
-  }
-
-  # init targetDir
-  if $targetDir == undef {
-    $_targetDir = "$_homeDir/installationen"
-  } else {
-    $_targetDir = $targetDir
-  }
-
-  notice("_srcURL: $_srcURL")
-  notice("_homeDir: $_homeDir")
-  notice("_libName: $_libName")
-  notice("_targetDir: $_targetDir")
-
-  file { $_targetDir:
+  file { $targetDir:
     ensure => directory,
   }
 
@@ -60,20 +37,20 @@ class geppetto (
     ensure  => directory,
   }
 
-  archive { $_libName:
+  archive { $libName:
     ensure     => present,
-    url        => $_srcURL,
+    url        => $srcURL,
     extension => "zip",
     src_target => $tmpDir,
-    target     => $_targetDir,
+    target     => $targetDir,
     checksum   => $checksum,
-    require    => [File[$tmpDir], File[$_targetDir]],
+    require    => [File[$tmpDir], File[$targetDir]],
   }
 
   file { 'geppetto.desktop':
     ensure  => file,
-    path    => "$_homeDir/Schreibtisch/geppetto.desktop",
+    path    => "$homeDir/Schreibtisch/geppetto.desktop",
     content => template('geppetto/geppetto.desktop.erb'),
-    require => Archive[$_libName],
+    require => Archive[$libName],
   }
 }

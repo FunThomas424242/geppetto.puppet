@@ -2,7 +2,7 @@
   "author": "FunThomas424242 (Thomas Schubert)",
   "dependencies": [{
       "name": "gini/archive",
-      "version_requirement": ">= 0.2.0"
+      "version_requirement": ">= 0.2.1"
     }],
   "license": "GNU LGPL v3",
   "name": "funthomas424242-geppetto",
