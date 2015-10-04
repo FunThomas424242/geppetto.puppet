@@ -1,5 +1,5 @@
 language: ruby
-rvm reinstall ruby-head --binary
+rvm reinstall ruby-2.2.3 --binary
 sudo: false
 cache: bundler 
 bundler_args: --without development
