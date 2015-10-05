@@ -52,9 +52,16 @@ class geppetto () {
     require    => [File[$geppetto::params::tmpDir], File[$geppetto::params::targetDir]],
   }
 
-  file { 'geppetto.desktop':
+  file { 'geppetto.desktop.Schreibtisch':
     ensure  => file,
     path    => "$geppetto::params::homeDir/Schreibtisch/geppetto.desktop",
+    content => template('geppetto/geppetto.desktop.erb'),
+    require => Archive[$geppetto::params::libName],
+  }
+  
+  file { 'geppetto.desktop.local':
+    ensure  => file,
+    path    => "$geppetto::params::homeDir/.local/share/applications/geppetto.desktop",
     content => template('geppetto/geppetto.desktop.erb'),
     require => Archive[$geppetto::params::libName],
   }
