@@ -17,8 +17,7 @@ Currently supports:
 General install with puppet in a manifest.pp file:
 
      class { 'geppetto':
-           user => 'your_local_login',
-           tmpDir => '/tmp',
+          
      }
 
 
