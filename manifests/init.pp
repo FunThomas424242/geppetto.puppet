@@ -10,20 +10,24 @@
 #
 # Sample Usage:
 #
-include archive::prerequisites
 
 
-class geppetto (
-  $user            = 'huluvu424242',
-  $geppettoVersion = '4.2.0-R201407250959',
-  $tmpDir          = '/tmp',
-  $srcURL          = undef,
-  $homeDir         = undef,
-  $libName         = undef,
-  $targetDir       = undef,
-  $checksum        = false,) {
+
+class geppetto () {
+
+ include archive::prerequisites
  
  include geppetto::params
+
+#  $user            = 'huluvu424242',
+#  $geppettoVersion = '4.2.0-R201407250959',
+#  $tmpDir          = '/tmp',
+#  $srcURL          = undef,
+#  $homeDir         = undef,
+   $libName         = $geppetto::params::libName
+   $targetDir       = $geppetto::params::targetDir
+#  $checksum        = false,
+
 
   notice("srcURL: $geppetto::params::srcURL")
   notice("homeDir: $geppetto::params::homeDir")
