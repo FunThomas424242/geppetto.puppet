@@ -1,5 +1,5 @@
 name    'funthomas424242-geppetto'
-version '0.1.3'
+version '0.1.4'
 source 'git://github.com/funthomas424242/geppetto.puppet.git'
 author 'FunThomas424242 (Thomas Schubert)'
 license 'GNU LGPL v3'

@@ -2,7 +2,19 @@
 #
 # This class defines some parameters
 #
-class geppetto::params {
+class geppetto::params (
+  $user,
+  $geppettoVersion,
+  $tmpDir,
+  $srcURL,
+  $homeDir,
+  $libName,
+  $targetDir,
+  $checksum,
+)
+
+
+{
 
   $user = undef ? {
     default => $::id
