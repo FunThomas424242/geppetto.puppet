@@ -23,6 +23,7 @@ class geppetto (
   $targetDir       = undef,
   $checksum        = false,) {
  
+ include geppetto::params
 
   notice("srcURL: $geppetto::params::srcURL")
   notice("homeDir: $geppetto::params::homeDir")
