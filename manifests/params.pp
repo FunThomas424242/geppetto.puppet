@@ -7,7 +7,6 @@ class geppetto::params (
   $geppettoVersion = '4.2.0-R201407250959',
   $tmpDir = '/tmp',
   $homeDir = "/home/$::id",
-  $libName = undef,
   $targetDir = "/home/$::id/installationen",
   $checksum = false,
 )
