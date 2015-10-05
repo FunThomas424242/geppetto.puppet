@@ -1,5 +1,10 @@
 ## Geppetto IDE Puppet Module
 
+# v0.1.4
+
+ * Parameter Klasse korrigiert um Benutzung zu ermöglichen.
+
+
 # v0.1.3
 
  * Desktop Starter unter Schreibtisch und .local/share/applications
