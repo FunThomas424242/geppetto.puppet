@@ -3,14 +3,14 @@
 # This class defines some parameters
 #
 class geppetto::params (
-  $user,
-  $geppettoVersion,
-  $tmpDir,
-  $srcURL,
-  $homeDir,
-  $libName,
-  $targetDir,
-  $checksum,
+  $user = undef,
+  $geppettoVersion = undef,
+  $tmpDir = undef,
+  $srcURL = undef,
+  $homeDir = undef,
+  $libName = undef,
+  $targetDir = undef,
+  $checksum = undef,
 )
 
 
