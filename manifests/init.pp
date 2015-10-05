@@ -38,7 +38,7 @@ class geppetto (
     ensure  => directory,
   }
 
-  archive { $libName:
+  archive { $geppetto::params::libName:
     ensure     => present,
     url        => $geppetto::params::srcURL,
     extension => "zip",
