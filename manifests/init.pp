@@ -30,28 +30,28 @@ class geppetto (
   notice("libName: $geppetto::params::libName")
   notice("targetDir: $geppetto::params::targetDir")
 
-  file { $targetDir:
+  file { $geppetto::params::targetDir:
     ensure => directory,
   }
 
-  file { $tmpDir:
+  file { $geppetto::params::tmpDir:
     ensure  => directory,
   }
 
   archive { $libName:
     ensure     => present,
-    url        => $srcURL,
+    url        => $geppetto::params::srcURL,
     extension => "zip",
-    src_target => $tmpDir,
-    target     => $targetDir,
-    checksum   => $checksum,
-    require    => [File[$tmpDir], File[$targetDir]],
+    src_target => $geppetto::params::tmpDir,
+    target     => $geppetto::params::targetDir,
+    checksum   => $geppetto::params::checksum,
+    require    => [File[$geppetto::params::tmpDir], File[$geppetto::params::targetDir]],
   }
 
   file { 'geppetto.desktop':
     ensure  => file,
-    path    => "$homeDir/Schreibtisch/geppetto.desktop",
+    path    => "$geppetto::params::homeDir/Schreibtisch/geppetto.desktop",
     content => template('geppetto/geppetto.desktop.erb'),
-    require => Archive[$libName],
+    require => Archive[$geppetto::params::libName],
   }
 }
