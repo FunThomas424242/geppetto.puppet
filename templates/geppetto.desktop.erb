@@ -2,9 +2,9 @@
 Type=Application
 Name=Geppetto
 Comment=Puppet IDE Geppetto
-Icon=<%= @targetDir %>/geppetto/icon.xpm
-Exec= <%= @targetDir %>/geppetto/geppetto
+Icon=<%= @geppetto::params::targetDir %>/<%= @geppetto::params::libName %>/icon.xpm
+Exec= <%= @geppetto::params::targetDir %>/<%= @geppetto::params::libName %>/geppetto
 Terminal=false
 StartupNotify=true
 Categories=Development;IDE;Puppet;
-Path=<%= @targetDir %>/geppetto
+Path=<%= @geppetto::params::targetDir %>/<%= @geppetto::params::libName %>
