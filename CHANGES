@@ -1,0 +1,18 @@
+## Geppetto IDE Puppet Module
+
+# v0.1.3
+
+ * Desktop Starter unter Schreibtisch und .local/share/applications
+ * include archive::prerequisites (hilft hoffentlich als Workaround)
+
+# v0.1.2
+
+ * Metadaten für Projekt URL korrigiert
+
+# v0.1.1
+
+ * Parameter in eigene Klasse extrahiert
+
+# v0.1.0
+
+ * initialer Wurf
