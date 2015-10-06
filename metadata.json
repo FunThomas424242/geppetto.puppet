@@ -14,5 +14,5 @@
   "source": "https://github.com/FunThomas424242/geppetto.puppet",
   "summary": "Install the ide geppetto to local drive.",
   "tags": ["ubuntu", "geppetto", "ide", "puppet" ],
-  "version": "0.1.4"
+  "version": "0.1.5"
 }

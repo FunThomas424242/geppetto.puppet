@@ -1,5 +1,10 @@
 ## Geppetto IDE Puppet Module
 
+# v0.1.5
+
+ * puppet-lint errors fixed
+
+
 # v0.1.4
 
  * Parameter Klasse korrigiert um Benutzung zu ermöglichen.
